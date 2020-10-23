@@ -4,7 +4,7 @@ const currencyEl_two = document.getElementById('currency-two');
 const amountEl_two = document.getElementById('amount-two');
 
 const rateEl = document.getElementById('rate');
-const swap = document.getElementById('swap');
+const swapBtn = document.getElementById('swap-btn');
 
 // Fetch exchange rates and update the DOM
 function calculate() {
@@ -29,7 +29,7 @@ amountEl_one.addEventListener('input', calculate);
 currencyEl_two.addEventListener('change', calculate);
 amountEl_two.addEventListener('input', calculate);
 
-swap.addEventListener('click', () => {
+swapBtn.addEventListener('click', () => {
   const temp = currencyEl_one.value;
   currencyEl_one.value = currencyEl_two.value;
   currencyEl_two.value = temp;
@@ -37,3 +37,4 @@ swap.addEventListener('click', () => {
 });
 
 calculate();
+
